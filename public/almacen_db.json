@@ -1,0 +1,900 @@
+{
+    "mockProducts": [
+        {
+            "id": 1,
+            "category": "FIERROS, ALAMBRES Y CLAVOS",
+            "name": "ALAMBRE NEGRO RECOCIDO N°16",
+            "unit": "KG",
+            "minStock": 5
+        },
+        {
+            "id": 2,
+            "category": "FIERROS, ALAMBRES Y CLAVOS",
+            "name": "ALAMBRE NEGRO RECOCIDO N°08",
+            "unit": "KG",
+            "minStock": 5
+        },
+        {
+            "id": 3,
+            "category": "FIERROS, ALAMBRES Y CLAVOS",
+            "name": "CLAVOS PARA MADERA C/C 3\"",
+            "unit": "KG",
+            "minStock": 5
+        },
+        {
+            "id": 4,
+            "category": "FIERROS, ALAMBRES Y CLAVOS",
+            "name": "ACERO CORRUGADO FY=4200 KG/CM2 GRADO 60",
+            "unit": "KG",
+            "minStock": 5
+        },
+        {
+            "id": 5,
+            "category": "FIERROS, ALAMBRES Y CLAVOS",
+            "name": "ACERO CORRUGADO DE Ø1/4\" GRADO 60",
+            "unit": "UND",
+            "minStock": 5
+        },
+        {
+            "id": 6,
+            "category": "FIERROS, ALAMBRES Y CLAVOS",
+            "name": "ACERO CORRUGADO DE Ø3/8\" GRADO 60",
+            "unit": "UND",
+            "minStock": 5
+        },
+        {
+            "id": 7,
+            "category": "FIERROS, ALAMBRES Y CLAVOS",
+            "name": "ACERO CORRUGADO DE Ø1/2\" GRADO 60",
+            "unit": "UND",
+            "minStock": 5
+        },
+        {
+            "id": 8,
+            "category": "FIERROS, ALAMBRES Y CLAVOS",
+            "name": "ACERO CORRUGADO DE Ø5/8\" GRADO 60",
+            "unit": "UND",
+            "minStock": 5
+        },
+        {
+            "id": 9,
+            "category": "FIERROS, ALAMBRES Y CLAVOS",
+            "name": "ACERO CORRUGADO DE Ø3/4\" GRADO 60",
+            "unit": "UND",
+            "minStock": 5
+        },
+        {
+            "id": 10,
+            "category": "FIERROS, ALAMBRES Y CLAVOS",
+            "name": "ACERO CORRUGADO DE Ø1\" GRADO 60",
+            "unit": "UND",
+            "minStock": 5
+        },
+        {
+            "id": 11,
+            "category": "FIERROS, ALAMBRES Y CLAVOS",
+            "name": "ACERO CORRUGADO DE Ø1 3/8\" GRADO 60",
+            "unit": "UND",
+            "minStock": 5
+        },
+        {
+            "id": 12,
+            "category": "FIERROS, ALAMBRES Y CLAVOS",
+            "name": "ACERO CORRUGADO DE Ø6 MM GRADO 60",
+            "unit": "UND",
+            "minStock": 5
+        },
+        {
+            "id": 13,
+            "category": "FIERROS, ALAMBRES Y CLAVOS",
+            "name": "ACERO CORRUGADO DE Ø8 MM GRADO 60",
+            "unit": "UND",
+            "minStock": 5
+        },
+        {
+            "id": 14,
+            "category": "FIERROS, ALAMBRES Y CLAVOS",
+            "name": "ACERO CORRUGADO DE Ø12 MM GRADO 60",
+            "unit": "UND",
+            "minStock": 5
+        },
+        {
+            "id": 15,
+            "category": "AGREGADOS",
+            "name": "ARENA FINA",
+            "unit": "M3",
+            "minStock": 5
+        },
+        {
+            "id": 16,
+            "category": "AGREGADOS",
+            "name": "ARENA GRUESA",
+            "unit": "M3",
+            "minStock": 5
+        },
+        {
+            "id": 17,
+            "category": "AGREGADOS",
+            "name": "PIEDRA CHANCADA DE 1/2\"",
+            "unit": "M3",
+            "minStock": 5
+        },
+        {
+            "id": 18,
+            "category": "AGREGADOS",
+            "name": "PIEDRA CHANCADA DE 1/4\"",
+            "unit": "M3",
+            "minStock": 5
+        },
+        {
+            "id": 19,
+            "category": "AGREGADOS",
+            "name": "PIEDRA MEDIANA DE 4\"-6\"",
+            "unit": "M3",
+            "minStock": 5
+        },
+        {
+            "id": 20,
+            "category": "AGREGADOS",
+            "name": "HORMIGON",
+            "unit": "M3",
+            "minStock": 5
+        },
+        {
+            "id": 21,
+            "category": "EPPS",
+            "name": "CASCO DE SEGURIDAD",
+            "unit": "UND",
+            "minStock": 10
+        },
+        {
+            "id": 22,
+            "category": "EPPS",
+            "name": "BOTAS DE JEBE",
+            "unit": "PAR",
+            "minStock": 15
+        },
+        {
+            "id": 23,
+            "category": "EPPS",
+            "name": "BOTAS DE SEGURIDAD PUNTA DE ACERO Y SUELA DE GOMA ANTIDESLIZANTE",
+            "unit": "PAR",
+            "minStock": 10
+        },
+        {
+            "id": 24,
+            "category": "EPPS",
+            "name": "TRAJE DE BIOSEGURIDAD",
+            "unit": "PZA",
+            "minStock": 5
+        },
+        {
+            "id": 25,
+            "category": "EPPS",
+            "name": "GUANTES DE JEBE",
+            "unit": "PAR",
+            "minStock": 15
+        },
+        {
+            "id": 26,
+            "category": "EPPS",
+            "name": "GUANTES DE CUERO",
+            "unit": "PAR",
+            "minStock": 20
+        },
+        {
+            "id": 27,
+            "category": "EPPS",
+            "name": "BARBIQUEJO",
+            "unit": "UND",
+            "minStock": 10
+        },
+        {
+            "id": 28,
+            "category": "EPPS",
+            "name": "LENTES DE SEGURIDAD CLAROS",
+            "unit": "UND",
+            "minStock": 20
+        },
+        {
+            "id": 29,
+            "category": "EPPS",
+            "name": "LENTES DE SEGURIDAD OSCUROS",
+            "unit": "UND",
+            "minStock": 20
+        },
+        {
+            "id": 30,
+            "category": "EPPS",
+            "name": "PROTECCIÓN DE OIDO TIPO TAPON",
+            "unit": "UND",
+            "minStock": 15
+        },
+        {
+            "id": 31,
+            "category": "EPPS",
+            "name": "CHALECO REFLECTIVO",
+            "unit": "UND",
+            "minStock": 10
+        },
+        {
+            "id": 32,
+            "category": "EPPS",
+            "name": "CORTAVIENTO PARA CASCO",
+            "unit": "UND",
+            "minStock": 5
+        },
+        {
+            "id": 33,
+            "category": "EPPS",
+            "name": "POLO MANGA LARGA TALLA S",
+            "unit": "UND",
+            "minStock": 10
+        },
+        {
+            "id": 34,
+            "category": "EPPS",
+            "name": "POLO MANGA LARGA TALLA M",
+            "unit": "UND",
+            "minStock": 10
+        },
+        {
+            "id": 35,
+            "category": "EPPS",
+            "name": "POLO MANGA LARGA TALLA L",
+            "unit": "UND",
+            "minStock": 10
+        },
+        {
+            "id": 36,
+            "category": "EPPS",
+            "name": "POLO MANGA LARGA TALLA XL",
+            "unit": "UND",
+            "minStock": 10
+        },
+        {
+            "id": 37,
+            "category": "EPPS",
+            "name": "PANTALON TALLA S",
+            "unit": "UND",
+            "minStock": 10
+        },
+        {
+            "id": 38,
+            "category": "EPPS",
+            "name": "PANTALON TALLA M",
+            "unit": "UND",
+            "minStock": 10
+        },
+        {
+            "id": 39,
+            "category": "EPPS",
+            "name": "PANTALON TALLA L",
+            "unit": "UND",
+            "minStock": 10
+        },
+        {
+            "id": 40,
+            "category": "EPPS",
+            "name": "PANTALON TALLA XL",
+            "unit": "UND",
+            "minStock": 10
+        },
+        {
+            "id": 41,
+            "category": "SEGURIDAD",
+            "name": "CINTA SEÑALADORA AMARILLA",
+            "unit": "RLL",
+            "minStock": 10
+        },
+        {
+            "id": 42,
+            "category": "SEGURIDAD",
+            "name": "CONO DE SEGURIDAD",
+            "unit": "UND",
+            "minStock": 20
+        },
+        {
+            "id": 43,
+            "category": "SEGURIDAD",
+            "name": "CILINDRO DE COLOR VERDE DE 55 GL",
+            "unit": "UND",
+            "minStock": 5
+        },
+        {
+            "id": 44,
+            "category": "SEGURIDAD",
+            "name": "CILINDRO DE COLOR MARRON DE 55 GL",
+            "unit": "UND",
+            "minStock": 5
+        },
+        {
+            "id": 45,
+            "category": "SEGURIDAD",
+            "name": "CILINDRO DE COLOR ROJO DE 55 GL",
+            "unit": "UND",
+            "minStock": 5
+        },
+        {
+            "id": 46,
+            "category": "SEGURIDAD",
+            "name": "LINEA DE VIDA",
+            "unit": "UND",
+            "minStock": 10
+        },
+        {
+            "id": 47,
+            "category": "SEGURIDAD",
+            "name": "ARNES DE SEGURIDAD",
+            "unit": "UND",
+            "minStock": 10
+        },
+        {
+            "id": 48,
+            "category": "SEGURIDAD",
+            "name": "MALLA DE SEGURIDAD 50 YDX1.00 M ALTO",
+            "unit": "RLL",
+            "minStock": 5
+        },
+        {
+            "id": 49,
+            "category": "MATERIALES",
+            "name": "CEMENTO PORTLAND TIPO I (42.5 KG)",
+            "unit": "BLS",
+            "minStock": 20
+        },
+        {
+            "id": 50,
+            "category": "MATERIALES",
+            "name": "LADRILLO KK 18 HUECOS 9X23X12.5",
+            "unit": "UND",
+            "minStock": 100
+        },
+        {
+            "id": 51,
+            "category": "MATERIALES",
+            "name": "LADRILLO PANDERETA 9X23X11",
+            "unit": "UND",
+            "minStock": 100
+        },
+        {
+            "id": 52,
+            "category": "MATERIALES",
+            "name": "BLOQUE DE CONCRETO 10X20X40",
+            "unit": "UND",
+            "minStock": 50
+        },
+        {
+            "id": 53,
+            "category": "MATERIALES",
+            "name": "LADRILLO TECHO HUECO 15X30X30",
+            "unit": "UND",
+            "minStock": 50
+        },
+        {
+            "id": 54,
+            "category": "MATERIALES",
+            "name": "LADRILLO CASETON 15X1.20X30",
+            "unit": "UND",
+            "minStock": 50
+        },
+        {
+            "id": 55,
+            "category": "MATERIALES",
+            "name": "CORDEL",
+            "unit": "RLL",
+            "minStock": 10
+        },
+        {
+            "id": 56,
+            "category": "MATERIALES",
+            "name": "YESO DE 25 KG",
+            "unit": "BLS",
+            "minStock": 20
+        },
+        {
+            "id": 57,
+            "category": "MATERIALES",
+            "name": "PEGAMENTO PARA PVC",
+            "unit": "GL",
+            "minStock": 10
+        },
+        {
+            "id": 58,
+            "category": "MATERIALES",
+            "name": "CINTA TEFLON",
+            "unit": "PZA",
+            "minStock": 50
+        },
+        {
+            "id": 59,
+            "category": "MATERIALES",
+            "name": "CINTA AISLANTE",
+            "unit": "PZA",
+            "minStock": 50
+        },
+        {
+            "id": 60,
+            "category": "MATERIALES",
+            "name": "FRAGUA DE 1 KG",
+            "unit": "BLS",
+            "minStock": 10
+        },
+        {
+            "id": 61,
+            "category": "MATERIALES",
+            "name": "CRUCETAS Y NIVELADORES DE PISO 1 MM X 200 UND",
+            "unit": "BLS",
+            "minStock": 5
+        },
+        {
+            "id": 62,
+            "category": "MATERIALES",
+            "name": "PISO CERAMICO LISO BLANCO 45 X 45 CM",
+            "unit": "CAJA",
+            "minStock": 10
+        },
+        {
+            "id": 63,
+            "category": "MATERIALES",
+            "name": "PISO CERAMICO LISO BLANCO 30 X 30 CM",
+            "unit": "CAJA",
+            "minStock": 10
+        },
+        {
+            "id": 64,
+            "category": "TUBERÍAS DE INSTALACIONES SANITARIAS",
+            "name": "TUBO PVC 1/2\" X 5M SP",
+            "unit": "UND",
+            "minStock": 20
+        },
+        {
+            "id": 65,
+            "category": "TUBERÍAS DE INSTALACIONES SANITARIAS",
+            "name": "TUBO PVC 3/4\" X 5M SP",
+            "unit": "UND",
+            "minStock": 20
+        },
+        {
+            "id": 66,
+            "category": "TUBERÍAS DE INSTALACIONES SANITARIAS",
+            "name": "TUBO PVC 1\" X 5M SP",
+            "unit": "UND",
+            "minStock": 15
+        },
+        {
+            "id": 67,
+            "category": "TUBERÍAS DE INSTALACIONES SANITARIAS",
+            "name": "TUBO PVC 1 1/2\" X 5M SP",
+            "unit": "UND",
+            "minStock": 15
+        },
+        {
+            "id": 68,
+            "category": "TUBERÍAS DE INSTALACIONES SANITARIAS",
+            "name": "TUBO PVC-U DESAGUE 4\" X 3M",
+            "unit": "UND",
+            "minStock": 10
+        },
+        {
+            "id": 69,
+            "category": "TUBERÍAS DE INSTALACIONES SANITARIAS",
+            "name": "TUBO PVC-U DESAGUE 2\" X 3M",
+            "unit": "UND",
+            "minStock": 10
+        },
+        {
+            "id": 70,
+            "category": "TUBERÍAS DE INSTALACIONES SANITARIAS",
+            "name": "TUBO PVC-U DESAGUE 3\" X 3M",
+            "unit": "UND",
+            "minStock": 10
+        },
+        {
+            "id": 71,
+            "category": "ACCESORIOS DE INSTALACIONES SANITARIAS",
+            "name": "CODO 90° PVC 1/2\" SP",
+            "unit": "UND",
+            "minStock": 10
+        },
+        {
+            "id": 72,
+            "category": "ACCESORIOS DE INSTALACIONES SANITARIAS",
+            "name": "CODO 45° PVC 1/2\" SP",
+            "unit": "UND",
+            "minStock": 10
+        },
+        {
+            "id": 73,
+            "category": "ACCESORIOS DE INSTALACIONES SANITARIAS",
+            "name": "CODO 90° PVC 3/4\" SP",
+            "unit": "UND",
+            "minStock": 10
+        },
+        {
+            "id": 74,
+            "category": "ACCESORIOS DE INSTALACIONES SANITARIAS",
+            "name": "CODO 45° PVC 3/4\" SP",
+            "unit": "UND",
+            "minStock": 10
+        },
+        {
+            "id": 75,
+            "category": "ACCESORIOS DE INSTALACIONES SANITARIAS",
+            "name": "CODO 90° PVC 1\" SP",
+            "unit": "UND",
+            "minStock": 10
+        },
+        {
+            "id": 76,
+            "category": "ACCESORIOS DE INSTALACIONES SANITARIAS",
+            "name": "CODO 90° PVC 1 1/2\" SP",
+            "unit": "UND",
+            "minStock": 10
+        },
+        {
+            "id": 77,
+            "category": "ACCESORIOS DE INSTALACIONES SANITARIAS",
+            "name": "CODO PVC MIXTO 1/2\"",
+            "unit": "UND",
+            "minStock": 10
+        },
+        {
+            "id": 78,
+            "category": "ACCESORIOS DE INSTALACIONES SANITARIAS",
+            "name": "TEE PVC 1/2\" SP",
+            "unit": "UND",
+            "minStock": 10
+        },
+        {
+            "id": 79,
+            "category": "ACCESORIOS DE INSTALACIONES SANITARIAS",
+            "name": "TEE PVC 1\" SP",
+            "unit": "UND",
+            "minStock": 10
+        },
+        {
+            "id": 80,
+            "category": "ACCESORIOS DE INSTALACIONES SANITARIAS",
+            "name": "TEE PVC 1 1/2\" SP",
+            "unit": "UND",
+            "minStock": 10
+        },
+        {
+            "id": 81,
+            "category": "ACCESORIOS DE INSTALACIONES SANITARIAS",
+            "name": "NIPLE 1/2\" ROSCADO",
+            "unit": "UND",
+            "minStock": 10
+        },
+        {
+            "id": 82,
+            "category": "ACCESORIOS DE INSTALACIONES SANITARIAS",
+            "name": "NIPLE 1\" ROSCADO",
+            "unit": "UND",
+            "minStock": 10
+        },
+        {
+            "id": 83,
+            "category": "ACCESORIOS DE INSTALACIONES SANITARIAS",
+            "name": "NIPLE 1 1/2\" ROSCADO",
+            "unit": "UND",
+            "minStock": 10
+        },
+        {
+            "id": 84,
+            "category": "ACCESORIOS DE INSTALACIONES SANITARIAS",
+            "name": "ADAPTADOR 1/2\" MIXTO",
+            "unit": "UND",
+            "minStock": 10
+        },
+        {
+            "id": 85,
+            "category": "ACCESORIOS DE INSTALACIONES SANITARIAS",
+            "name": "ADAPTADOR 1\" MIXTO",
+            "unit": "UND",
+            "minStock": 10
+        },
+        {
+            "id": 86,
+            "category": "ACCESORIOS DE INSTALACIONES SANITARIAS",
+            "name": "ADAPTADOR 1 1/2\" MIXTO",
+            "unit": "UND",
+            "minStock": 10
+        },
+        {
+            "id": 87,
+            "category": "ACCESORIOS DE INSTALACIONES SANITARIAS",
+            "name": "UNION UNIVERSAL PVC 1/2\" CR",
+            "unit": "UND",
+            "minStock": 10
+        },
+        {
+            "id": 88,
+            "category": "ACCESORIOS DE INSTALACIONES SANITARIAS",
+            "name": "UNION UNIVERSAL PVC 1\" CR",
+            "unit": "UND",
+            "minStock": 10
+        },
+        {
+            "id": 89,
+            "category": "ACCESORIOS DE INSTALACIONES SANITARIAS",
+            "name": "UNION UNIVERSAL PVC 1 1/2\" CR",
+            "unit": "UND",
+            "minStock": 10
+        },
+        {
+            "id": 90,
+            "category": "ACCESORIOS DE INSTALACIONES SANITARIAS",
+            "name": "TEE DESAGUE PVC 4\" X 4\"",
+            "unit": "UND",
+            "minStock": 10
+        },
+        {
+            "id": 91,
+            "category": "ACCESORIOS DE INSTALACIONES SANITARIAS",
+            "name": "TEE DESAGUE PVC 2\" X 2\"",
+            "unit": "UND",
+            "minStock": 10
+        },
+        {
+            "id": 92,
+            "category": "ACCESORIOS DE INSTALACIONES SANITARIAS",
+            "name": "TEE DESAGUE PVC 4\" X 2\"",
+            "unit": "UND",
+            "minStock": 10
+        },
+        {
+            "id": 93,
+            "category": "ACCESORIOS DE INSTALACIONES SANITARIAS",
+            "name": "TEE SANITARIA PVC 4\" X 4\"",
+            "unit": "UND",
+            "minStock": 10
+        },
+        {
+            "id": 94,
+            "category": "ACCESORIOS DE INSTALACIONES SANITARIAS",
+            "name": "TEE SANITARIA PVC 2\" X 2\"",
+            "unit": "UND",
+            "minStock": 10
+        },
+        {
+            "id": 95,
+            "category": "ACCESORIOS DE INSTALACIONES SANITARIAS",
+            "name": "TEE SANITARIA PVC 4\" X 2\"",
+            "unit": "UND",
+            "minStock": 10
+        },
+        {
+            "id": 96,
+            "category": "ACCESORIOS DE INSTALACIONES SANITARIAS",
+            "name": "YEE DESAGUE PVC 4\" X 4\"",
+            "unit": "UND",
+            "minStock": 10
+        },
+        {
+            "id": 97,
+            "category": "ACCESORIOS DE INSTALACIONES SANITARIAS",
+            "name": "YEE DESAGUE PVC 2\" X 2\"",
+            "unit": "UND",
+            "minStock": 10
+        },
+        {
+            "id": 98,
+            "category": "ACCESORIOS DE INSTALACIONES SANITARIAS",
+            "name": "YEE DESAGUE PVC 4\" X 2\"",
+            "unit": "UND",
+            "minStock": 10
+        },
+        {
+            "id": 99,
+            "category": "ACCESORIOS DE INSTALACIONES SANITARIAS",
+            "name": "CRUZ DESAGUE PVC 4\"",
+            "unit": "UND",
+            "minStock": 10
+        },
+        {
+            "id": 100,
+            "category": "ACCESORIOS DE INSTALACIONES SANITARIAS",
+            "name": "CRUZ DESAGUE PVC 2\"",
+            "unit": "UND",
+            "minStock": 10
+        },
+        {
+            "id": 101,
+            "category": "ACCESORIOS DE INSTALACIONES SANITARIAS",
+            "name": "REDUCCIÓN DESAGUE PVC 4\"X2\"",
+            "unit": "UND",
+            "minStock": 10
+        },
+        {
+            "id": 102,
+            "category": "ACCESORIOS DE INSTALACIONES SANITARIAS",
+            "name": "CODO DESAGUE 4\" X 90°",
+            "unit": "UND",
+            "minStock": 10
+        },
+        {
+            "id": 103,
+            "category": "ACCESORIOS DE INSTALACIONES SANITARIAS",
+            "name": "CODO DESAGUE 4\" X 45°",
+            "unit": "UND",
+            "minStock": 10
+        },
+        {
+            "id": 104,
+            "category": "ACCESORIOS DE INSTALACIONES SANITARIAS",
+            "name": "CODO DESAGUE 2\" X 90°",
+            "unit": "UND",
+            "minStock": 10
+        },
+        {
+            "id": 105,
+            "category": "ACCESORIOS DE INSTALACIONES SANITARIAS",
+            "name": "CODO DESAGUE 2\" X 45°",
+            "unit": "UND",
+            "minStock": 10
+        },
+        {
+            "id": 106,
+            "category": "ACCESORIOS DE INSTALACIONES SANITARIAS",
+            "name": "LLAVE PASO PVC C/R 1/2\"",
+            "unit": "UND",
+            "minStock": 10
+        },
+        {
+            "id": 107,
+            "category": "ACCESORIOS DE INSTALACIONES SANITARIAS",
+            "name": "LLAVE PASO PVC C/R 1\"",
+            "unit": "UND",
+            "minStock": 10
+        },
+        {
+            "id": 108,
+            "category": "ACCESORIOS DE INSTALACIONES SANITARIAS",
+            "name": "LLAVE PASO PVC C/R 1 1/2\"",
+            "unit": "UND",
+            "minStock": 10
+        },
+        {
+            "id": 109,
+            "category": "ACCESORIOS DE INSTALACIONES SANITARIAS",
+            "name": "SUMIDERO PESADO BRONCE 2\"",
+            "unit": "UND",
+            "minStock": 10
+        },
+        {
+            "id": 110,
+            "category": "ACCESORIOS DE INSTALACIONES SANITARIAS",
+            "name": "SUMIDERO PESADO BRONCE 3\"",
+            "unit": "UND",
+            "minStock": 10
+        },
+        {
+            "id": 111,
+            "category": "ACCESORIOS DE INSTALACIONES SANITARIAS",
+            "name": "SUMIDERO PESADO BRONCE 4\"",
+            "unit": "UND",
+            "minStock": 10
+        },
+        {
+            "id": 112,
+            "category": "ACCESORIOS DE INSTALACIONES SANITARIAS",
+            "name": "REGISTRO CROMADO 2\"",
+            "unit": "UND",
+            "minStock": 10
+        },
+        {
+            "id": 113,
+            "category": "ACCESORIOS DE INSTALACIONES SANITARIAS",
+            "name": "REGISTRO CROMADO 3\"",
+            "unit": "UND",
+            "minStock": 10
+        },
+        {
+            "id": 114,
+            "category": "ACCESORIOS DE INSTALACIONES SANITARIAS",
+            "name": "REGISTRO CROMADO 4\"",
+            "unit": "UND",
+            "minStock": 10
+        },
+        {
+            "id": 115,
+            "category": "TUBERÍAS DE INSTALACIONES ELÉCTRICAS",
+            "name": "TUBO LUZ SEL 3/4\" X 3M",
+            "unit": "UND",
+            "minStock": 10
+        },
+        {
+            "id": 116,
+            "category": "TUBERÍAS DE INSTALACIONES ELÉCTRICAS",
+            "name": "TUBO LUZ SEL 1\" X 3M",
+            "unit": "UND",
+            "minStock": 10
+        },
+        {
+            "id": 117,
+            "category": "TUBERÍAS DE INSTALACIONES ELÉCTRICAS",
+            "name": "TUBO LUZ SEL 2\" X 3M",
+            "unit": "UND",
+            "minStock": 10
+        },
+        {
+            "id": 118,
+            "category": "ACCESORIOS DE INSTALACIONES ELÉCTRICAS",
+            "name": "CURVA SEL 3/4\"",
+            "unit": "UND",
+            "minStock": 10
+        },
+        {
+            "id": 119,
+            "category": "ACCESORIOS DE INSTALACIONES ELÉCTRICAS",
+            "name": "CURVA SEL 1\"",
+            "unit": "UND",
+            "minStock": 10
+        },
+        {
+            "id": 120,
+            "category": "ACCESORIOS DE INSTALACIONES ELÉCTRICAS",
+            "name": "CURVA SEL 2\"",
+            "unit": "UND",
+            "minStock": 10
+        },
+        {
+            "id": 121,
+            "category": "ACCESORIOS DE INSTALACIONES ELÉCTRICAS",
+            "name": "CAJA DE PASE OCTOGONAL PVC",
+            "unit": "UND",
+            "minStock": 10
+        },
+        {
+            "id": 122,
+            "category": "ACCESORIOS DE INSTALACIONES ELÉCTRICAS",
+            "name": "CAJA DE PASE RECTANGULAR",
+            "unit": "UND",
+            "minStock": 10
+        },
+        {
+            "id": 123,
+            "category": "ACCESORIOS DE INSTALACIONES ELÉCTRICAS",
+            "name": "TOMACORRIENTE SIMPLE UNIVERSAL",
+            "unit": "UND",
+            "minStock": 10
+        },
+        {
+            "id": 124,
+            "category": "ACCESORIOS DE INSTALACIONES ELÉCTRICAS",
+            "name": "TOMACORRIENTE DOBLE UNIVERSAL",
+            "unit": "UND",
+            "minStock": 10
+        },
+        {
+            "id": 125,
+            "category": "ACCESORIOS DE INSTALACIONES ELÉCTRICAS",
+            "name": "TOMACORRIENTE TRIPLE UNIVERSAL",
+            "unit": "UND",
+            "minStock": 10
+        },
+        {
+            "id": 126,
+            "category": "ACCESORIOS DE INSTALACIONES ELÉCTRICAS",
+            "name": "INTERRUPTOR SIMPLE",
+            "unit": "UND",
+            "minStock": 10
+        },
+        {
+            "id": 127,
+            "category": "ACCESORIOS DE INSTALACIONES ELÉCTRICAS",
+            "name": "INTERRUPTOR DOBLE",
+            "unit": "UND",
+            "minStock": 10
+        },
+        {
+            "id": 128,
+            "category": "ACCESORIOS DE INSTALACIONES ELÉCTRICAS",
+            "name": "SOCKETS",
+            "unit": "UND",
+            "minStock": 10
+        }
+    ]
+}
