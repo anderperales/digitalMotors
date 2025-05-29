@@ -1,0 +1,184 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model Book {
+  id             Int          @id @default(autoincrement())
+  team           String?
+  description    String
+  comment        String?      @default("")
+  createdAt      DateTime     @default(now())
+  updatedAt      DateTime     @updatedAt
+  userId         Int
+  constructionId Int          @default(0)
+  user           User         @relation(fields: [userId], references: [id])
+  construction   Construction @relation(fields: [constructionId], references: [id])
+  trabajadores   Trabajador[] @relation("BookTrabajador")
+}
+
+model File {
+  id        Int      @id @default(autoincrement())
+  publicId  String
+  url       String
+  type      String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  productId Int
+  product   Product  @relation(fields: [productId], references: [id])
+}
+
+model Persona {
+  id         Int         @id @default(autoincrement())
+  nombres    String
+  apellidos  String
+  celular    String
+  direccion  String
+  email      String      @unique
+  userId     Int?        @unique
+  user       User?       @relation(fields: [userId], references: [id])
+  trabajador Trabajador?
+}
+
+model User {
+  id            Int            @id @default(autoincrement())
+  email         String         @unique
+  username      String         @unique
+  password      String
+  createdAt     DateTime       @default(now())
+  updatedAt     DateTime       @updatedAt
+  cvUrl         String?        @default("")
+  cvUpdatedAt   DateTime       @updatedAt
+  state         Boolean        @default(false)
+  type          Int            @default(1)
+  personaId     Int?           @unique
+  attendances   Attendance[]
+  books         Book[]
+  persona       Persona?
+  companies     Company[]      @relation("UserToCompanies")
+  constructions Construction[] @relation("UserToConstructions")
+}
+
+model Company {
+  id            Int            @id @default(autoincrement())
+  companyName   String
+  RUC           String         @unique
+  constructions Construction[]
+  users         User[]         @relation("UserToCompanies")
+}
+
+model Cargo {
+  id           Int          @id @default(autoincrement())
+  nombre       String       @unique
+  trabajadores Trabajador[]
+}
+
+model Trabajador {
+  id                         Int                 @id @default(autoincrement())
+  personaId                  Int                 @unique
+  cargoId                    Int
+  constructionId             Int
+  movimientosComoSolicitante MovimientoAlmacen[] @relation("SolicitanteRelacion")
+  movimientosComoResponsable MovimientoAlmacen[] @relation("ResponsableRelacion")
+  persona                    Persona             @relation(fields: [personaId], references: [id])
+  cargo                      Cargo               @relation(fields: [cargoId], references: [id])
+  construction               Construction        @relation(fields: [constructionId], references: [id])
+  books                      Book[]              @relation("BookTrabajador")
+}
+
+model Construction {
+  id           Int                 @id @default(autoincrement())
+  description  String
+  startDate    DateTime?
+  endDate      DateTime?
+  address      String?
+  latitude     Float?
+  longitude    Float?
+  companyId    Int
+  attendances  Attendance[]
+  book         Book[]
+  company      Company             @relation(fields: [companyId], references: [id])
+  movimientos  MovimientoAlmacen[]
+  trabajadores Trabajador[]
+  users        User[]              @relation("UserToConstructions")
+}
+
+model Attendance {
+  id             Int          @id @default(autoincrement())
+  status         Int          @default(0)
+  notes          String?
+  latitude       Float?
+  longitude      Float?
+  createdAt      DateTime     @default(now())
+  updatedAt      DateTime     @updatedAt
+  constructionId Int
+  userId         Int
+  construction   Construction @relation(fields: [constructionId], references: [id])
+  user           User         @relation(fields: [userId], references: [id])
+}
+
+model Product {
+  id            Int                 @id @default(autoincrement())
+  name          String              @unique
+  purchasePrice Float?
+  salePrice     Float?
+  color         String?
+  brandId       Int
+  weight        Float?
+  size          String?
+  condition     String?             @default("new")
+  year          Int?
+  notes         String?
+  categoryId    Int
+  unitId        Int
+  createdAt     DateTime            @default(now())
+  updatedAt     DateTime            @updatedAt
+  files         File[]
+  movimientos   MovimientoAlmacen[]
+  brand         Brand               @relation(fields: [brandId], references: [id])
+  category      Category            @relation(fields: [categoryId], references: [id])
+  unit          Unit                @relation(fields: [unitId], references: [id])
+}
+
+model Brand {
+  id       Int       @id @default(autoincrement())
+  name     String    @unique
+  products Product[]
+}
+
+model Almacen {
+  id        Int    @id @default(autoincrement())
+  nombre    String @unique
+  direccion String
+}
+
+model Category {
+  id       Int       @id @default(autoincrement())
+  name     String    @unique
+  products Product[]
+}
+
+model Unit {
+  id       Int       @id @default(autoincrement())
+  name     String    @unique
+  products Product[]
+}
+
+model MovimientoAlmacen {
+  id             Int          @id @default(autoincrement())
+  createdAt      DateTime     @default(now())
+  updatedAt      DateTime     @updatedAt
+  productoId     Int
+  solicitanteId  Int
+  responsableId  Int
+  cantidad       Float
+  constructionId Int
+  producto       Product      @relation(fields: [productoId], references: [id])
+  solicitante    Trabajador   @relation("SolicitanteRelacion", fields: [solicitanteId], references: [id])
+  responsable    Trabajador   @relation("ResponsableRelacion", fields: [responsableId], references: [id])
+  construction   Construction @relation(fields: [constructionId], references: [id])
+}

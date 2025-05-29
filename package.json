@@ -1,0 +1,49 @@
+{
+  "name": "nextjs-prisma-crud",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "postinstall": "prisma generate"
+  },
+  "dependencies": {
+    "@headlessui/react": "^2.2.0",
+    "@mercadopago/sdk-react": "^0.0.19",
+    "@prisma/client": "^5.0.0",
+    "@types/node": "20.4.2",
+    "@types/react": "18.2.15",
+    "@types/react-dom": "18.2.7",
+    "@vercel/postgres": "^0.10.0",
+    "autoprefixer": "10.4.14",
+    "bcrypt": "^5.1.1",
+    "cloudinary": "^2.5.1",
+    "eslint": "8.45.0",
+    "eslint-config-next": "13.4.11",
+    "file-saver": "^2.0.5",
+    "flowbite-react": "^0.10.2",
+    "jspdf": "^2.5.2",
+    "jspdf-autotable": "^3.8.4",
+    "jszip": "^3.10.1",
+    "mercadopago": "^2.0.15",
+    "next": "13.4.11",
+    "next-auth": "^4.24.8",
+    "next-cloudinary": "^6.15.0",
+    "postcss": "8.4.27",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-hook-form": "^7.53.0",
+    "react-icons": "^4.10.1",
+    "tailwindcss": "3.3.3",
+    "typescript": "5.1.6"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^5.0.2",
+    "@types/file-saver": "^2.0.7",
+    "@types/formidable": "^3.4.5",
+    "@types/jspdf": "^2.0.0",
+    "prisma": "5.0.0"
+  }
+}
