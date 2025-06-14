@@ -187,14 +187,14 @@ function NotebookData() {
     <div className="p-4 bg-gray-100 rounded-lg">
       <div className="flex justify-between items-center gap-2">
         
-      <Badge customColor="bg-blue-800" customText="Módulo de Cuaderno de Obra" />
+      <Badge customColor="bg-bramotors-red" customText="Módulo de Cuaderno de Obra" />
 
         <div className="flex justify-end items-center gap-2 sm:hidden">
         { userType != 2 && ( 
           <button
             onClick={handleExportPDF}
             disabled={filters.constructionId==""}
-            className={`px-3 py-2 text-white rounded ${filters.constructionId!="" ? "bg-blue-800 hover:bg-blue-800" : "bg-gray-400 cursor-not-allowed"} flex items-center gap-2`}
+            className={`px-3 py-2 text-white rounded ${filters.constructionId!="" ? "bg-bramotors-red hover:bg-bramotors-red" : "bg-gray-400 cursor-not-allowed"} flex items-center gap-2`}
           >
             <HiDownload />
             <span className="hidden sm:inline">Exportar</span>
@@ -204,7 +204,7 @@ function NotebookData() {
           <button
             onClick={() => handleOpenModal("create")}
             disabled={filters.constructionId==""}
-            className={`px-3 py-2  text-white rounded ${filters.constructionId!="" ? "bg-blue-800 hover:bg-sky-600" : "bg-gray-400 cursor-not-allowed"} flex items-center gap-2`}
+            className={`px-3 py-2  text-white rounded ${filters.constructionId!="" ? "bg-bramotors-red hover:bg-bramotors-red/60" : "bg-gray-400 cursor-not-allowed"} flex items-center gap-2`}
           >
             <HiPlus />
             <span className="hidden sm:inline">Nuevo</span>
@@ -269,7 +269,7 @@ function NotebookData() {
             <button
               onClick={handleExportPDF}
               disabled={filters.constructionId==""}
-              className={`px-3 py-2  text-white rounded ${filters.constructionId!="" ? "bg-blue-800 hover:bg-sky-600" : "bg-gray-400 cursor-not-allowed"} flex items-center gap-2"`}
+              className={`px-3 py-2  text-white rounded ${filters.constructionId!="" ? "bg-bramotors-red hover:bg-bramotors-red/60" : "bg-gray-400 cursor-not-allowed"} flex items-center gap-2"`}
             >
               <HiDownload />
               <span className="hidden sm:inline sm:pl-2">Exportar</span>
@@ -279,7 +279,7 @@ function NotebookData() {
             <button
               onClick={() => handleOpenModal("create")}
               disabled={filters.constructionId==""}
-              className={`px-3 py-2  text-white rounded ${filters.constructionId!="" ? "bg-blue-800 hover:bg-sky-600" : "bg-gray-400 cursor-not-allowed"} flex items-center gap-2`}
+              className={`px-3 py-2  text-white rounded ${filters.constructionId!="" ? "bg-bramotors-red hover:bg-bramotors-red/60" : "bg-gray-400 cursor-not-allowed"} flex items-center gap-2`}
 
             >
               <HiPlus />
@@ -345,7 +345,7 @@ function NotebookData() {
         <button
           onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
           disabled={currentPage === 1}
-          className="text-xs px-4 py-2 mx-2 bg-blue-800 text-white rounded disabled:opacity-50"
+          className="text-xs px-4 py-2 mx-2 bg-bramotors-red text-white rounded disabled:opacity-50"
         >
           Anterior
         </button>
@@ -355,7 +355,7 @@ function NotebookData() {
         <button
           onClick={() => setCurrentPage((prev) => Math.min(prev + 1, totalPages))}
           disabled={currentPage === totalPages}
-          className="text-xs px-4 py-2 mx-2 bg-blue-800 text-white rounded disabled:opacity-50"
+          className="text-xs px-4 py-2 mx-2 bg-bramotors-red text-white rounded disabled:opacity-50"
         >
           Siguiente
         </button>

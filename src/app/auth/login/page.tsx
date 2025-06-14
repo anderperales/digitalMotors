@@ -50,7 +50,7 @@ function LoginPage() {
             <div
             className="min-h-screen flex items-center justify-center bg-cover bg-center"
             style={{
-                backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 128, 0.5)), url('/bg.png')`,
+                backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(255, 0, 0, 0.6)), url('/bg.png')`,
             }}
         >
             <section>
@@ -64,7 +64,7 @@ function LoginPage() {
             <div
                 className="min-h-screen flex items-center justify-center bg-cover bg-center"
                 style={{
-                    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 128, 0.5)), url('/bg.png')`,
+                    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(255, 0, 0, 0.3)), url('/bg.png')`,
                 }}
             >
                 <section>
@@ -76,7 +76,7 @@ function LoginPage() {
                                 <Image
                                     style={{ objectFit: 'contain', backgroundColor: 'transparent' }}
                                     className="mr-2 mb-5" 
-                                    src="/logo.svg"
+                                    src="/logo.png"
                                     alt="logo"
                                     height={169}
                                     width={300}

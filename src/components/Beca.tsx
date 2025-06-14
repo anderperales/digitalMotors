@@ -13,7 +13,7 @@ const Beca: React.FC = () => {
             <p className="text-black font-bold text-xl md:text-2xl text-center ">
                 En Terra nos esforzamos día a día en mejorar y compartir el conocimiento a los profesionales del futuro
             </p>
-            <button className="bg-blue-800 text-white font-bold py-3 px-6 rounded-full  transition-transform transform hover:scale-105 active:scale-95"
+            <button className="bg-bramotors-red text-white font-bold py-3 px-6 rounded-full  transition-transform transform hover:scale-105 active:scale-95"
             onClick={() => handleButtonClick("+51967203938", "Hola, me gustaría saber más sobre otro servicio")}
             >
                 ACCEDE A UNA BECA DEL 70% AQUÍ

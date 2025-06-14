@@ -44,7 +44,7 @@ export default function Works() {
                                     style={{ textDecoration: 'none' }}
                                 >
                                     <span
-                                        className="bg-blue-800 text-white px-2 py-1 rounded-lg items-center text-sm inline-flex"
+                                        className="bg-bramotors-red text-white px-2 py-1 rounded-lg items-center text-sm inline-flex"
                                     >
                                         <HiHand></HiHand>
                                         <div>
@@ -91,7 +91,7 @@ export default function Works() {
                                     style={{ textDecoration: 'none' }}
                                 >
                                     <span
-                                        className="bg-blue-800 text-white px-2 py-1 rounded-lg items-center text-sm inline-flex"
+                                        className="bg-bramotors-red text-white px-2 py-1 rounded-lg items-center text-sm inline-flex"
                                     >
                                         <HiHand></HiHand>
                                         <div>
@@ -138,7 +138,7 @@ export default function Works() {
                                     style={{ textDecoration: 'none' }}
                                 >
                                     <span
-                                        className="bg-blue-800 text-white px-2 py-1 rounded-lg items-center text-sm inline-flex"
+                                        className="bg-bramotors-red text-white px-2 py-1 rounded-lg items-center text-sm inline-flex"
                                     >
                                         <HiHand></HiHand>
                                         <div>
@@ -186,7 +186,7 @@ export default function Works() {
                                     style={{ textDecoration: 'none' }}
                                 >
                                     <span
-                                        className="bg-blue-800 text-white px-2 py-1 rounded-lg items-center text-sm inline-flex"
+                                        className="bg-bramotors-red text-white px-2 py-1 rounded-lg items-center text-sm inline-flex"
                                     >
                                         <HiHand></HiHand>
                                         <div>

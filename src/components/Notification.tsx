@@ -26,7 +26,7 @@ const Notification: React.FC<NotificationProps> = ({
   if (!visible) return null;
 
   const bgColor = {
-    success: "bg-blue-800",
+    success: "bg-bramotors-red",
     error: "bg-red-500",
     warning: "bg-yellow-500",
     info: "bg-blue-500",

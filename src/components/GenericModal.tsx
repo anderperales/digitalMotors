@@ -290,11 +290,11 @@ const fetchEntity = async (id: number) => {
               </>
               }
               <div className="flex justify-end gap-2 mt-4">
-                <button onClick={onClose} className="px-4 py-2 bg-gray-400 text-white rounded">Cancelar</button>
+                <button onClick={onClose} className="px-4 py-2 bg-gray-400 hover:bg-gray-400/70 text-white rounded">Cancelar</button>
                 {mode === "delete" ? (
-                  <button onClick={handleDelete} className="px-4 py-2 bg-red-600 text-white rounded">Eliminar</button>
+                  <button onClick={handleDelete} className="px-4 py-2 bg-red-600 hover:bg-bramotors-red/70 text-white rounded">Eliminar</button>
                 ) : (
-                  <button type="submit" className="px-4 py-2 bg-blue-800 text-white rounded">
+                  <button type="submit" className="px-4 py-2 bg-bramotors-red hover:bg-bramotors-red/70 text-white rounded">
                     {mode === "edit" ? "Actualizar" : "Guardar"}
                   </button>
                 )}
