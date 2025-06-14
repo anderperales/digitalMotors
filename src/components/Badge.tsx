@@ -21,7 +21,7 @@ const Badge: React.FC<BadgeProps> = ({ stateId = 0,  customColor = "bg-gray-300"
       text = 'Leído';
       break;
     case 3:
-      color = 'bg-blue-800';
+      color = 'bg-bramotors-red';
       text = 'Atendido';
       break;
     case 4:

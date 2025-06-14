@@ -87,7 +87,7 @@ export default function CatalogPage() {
                 />
               </div>
               <div className="p-4">
-                <span className="inline-block text-xs font-medium text-white bg-blue-800 px-2 py-1 rounded mb-2">
+                <span className="inline-block text-xs font-medium text-white bg-bramotors-red px-2 py-1 rounded mb-2">
                   {producto.category}
                 </span>
                 <h3 className="text-lg font-semibold text-gray-800 line-clamp-2 h-12">{producto.name}</h3>
@@ -102,7 +102,7 @@ export default function CatalogPage() {
     unit: { name: producto.unit },
   })
 }
-                className="flex items-center justify-center gap-2 bg-blue-800 text-white px-4 py-2 rounded hover:bg-blue-900 transition text-sm w-full"
+                className="flex items-center justify-center gap-2 bg-bramotors-red text-white px-4 py-2 rounded hover:bg-blue-900 transition text-sm w-full"
               >
                 <FaCartPlus />
                 Agregar al carrito

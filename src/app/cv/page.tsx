@@ -183,7 +183,7 @@ function CV() {
                         href={cvUrl || ''} // Cambia a undefined si no hay cvUrl
                         target="_blank"
                         download={cvUrl ? "Curriculum_Vitae.pdf" : ''} // Solo establece el nombre si hay cvUrl
-                        className={`h-10 w-full max-w-[326px] rounded-xl flex items-center justify-center ${cvUrl ? 'bg-blue-800 text-white' : 'bg-gray-300 text-gray-500 cursor-not-allowed'}`}
+                        className={`h-10 w-full max-w-[326px] rounded-xl flex items-center justify-center ${cvUrl ? 'bg-bramotors-red text-white' : 'bg-gray-300 text-gray-500 cursor-not-allowed'}`}
                         onClick={(e) => {
                             if (!cvUrl) {
                                 e.preventDefault(); // Previene el comportamiento por defecto si no hay cvUrl

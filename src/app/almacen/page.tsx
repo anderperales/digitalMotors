@@ -124,7 +124,7 @@ const Almacen = () => {
 
   return (
     <div className="p-4 bg-gray-100 rounded-lg">
-      <Badge customColor="bg-blue-800" customText="Módulo de Almacén"></Badge>
+      <Badge customColor="bg-bramotors-red" customText="Módulo de Almacén"></Badge>
 
       <div className="m-3">
         <GenericFilter noSelectedText="Seleccione un proyecto" endPoint="/api/sedes" title={"Proyecto"} filterKey={"id"} displayKey={"description"} selectedValue={selectedProjectId} setSelectedValue={setSelectedProjectId}></GenericFilter>
@@ -195,7 +195,7 @@ const Almacen = () => {
 
               <button
                 onClick={() => handleTransaction("Entrada")}
-                className="flex items-center gap-2 px-4 py-2 bg-blue-800 text-white rounded-lg shadow-md hover:bg-sky-600 transition"
+                className="flex items-center gap-2 px-4 py-2 bg-bramotors-red text-white rounded-lg shadow-md hover:bg-bramotors-red/60 transition"
               >
                 Entrada <HiArrowNarrowRight className="text-sm" />
               </button>
@@ -258,11 +258,11 @@ const Almacen = () => {
               </button>
               <button
                 onClick={() => confirmTransaction()}
-                disabled={transactionStock <= 0} className={`text-xs  px-4 py-2 rounded ${transactionStock > 0 ? "bg-blue-800 text-white" : "bg-gray-300 text-gray-600 cursor-not-allowed"
+                disabled={transactionStock <= 0} className={`text-xs  px-4 py-2 rounded ${transactionStock > 0 ? "bg-bramotors-red text-white" : "bg-gray-300 text-gray-600 cursor-not-allowed"
                   }`}
               // disabled={!selectedWorker || transactionStock <= 0}
               // className={`text-xs  px-4 py-2 rounded ${
-              //   selectedWorker && transactionStock > 0 ? "bg-blue-800 text-white" : "bg-gray-300 text-gray-600 cursor-not-allowed"
+              //   selectedWorker && transactionStock > 0 ? "bg-bramotors-red text-white" : "bg-gray-300 text-gray-600 cursor-not-allowed"
               // }`}
               >
                 Confirmar

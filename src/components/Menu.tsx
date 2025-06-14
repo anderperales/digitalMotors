@@ -38,7 +38,7 @@ function Menu() {
         <>
           {/* Botón de abrir menú solo visible cuando el Drawer está cerrado */}
           {!isOpen && (
-            <button onClick={toggleDrawer} className="p-1 fixed top-1  left-5 z-50 bg-blue-800 rounded-xl">
+            <button onClick={toggleDrawer} className="p-1 fixed top-1  left-5 z-50 bg-bramotors-black hover:bg-white/20 rounded-xl">
               <HiMenu className="text-white text-2xl "/>
             </button>
           )}

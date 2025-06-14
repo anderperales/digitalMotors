@@ -135,7 +135,7 @@ const AttendanceComponent = () => {
   return (
     <div className="p-4  bg-gray-100 rounded-lg">
        <div className="mb-4">
-          <Badge customColor="bg-blue-800" customText="Módulo de Asistencia"></Badge>
+          <Badge customColor="bg-bramotors-red" customText="Módulo de Asistencia"></Badge>
         </div>
 
       <div className="p-4">
@@ -161,7 +161,7 @@ const AttendanceComponent = () => {
       {userType !== 2 && (      
           <button
             onClick={handleMarkAttendance}
-            className={`px-2 py-1 ${selectedConstructionId==null ? "bg-gray-400" :  "bg-blue-800" } w-full md:w-fit justify-center text-white text-xs rounded-md   ${selectedConstructionId==null ? "" :  "hover:bg-sky-600" }`}
+            className={`px-2 py-1 ${selectedConstructionId==null ? "bg-gray-400" :  "bg-bramotors-red" } w-full md:w-fit justify-center text-white text-xs rounded-md   ${selectedConstructionId==null ? "" :  "hover:bg-bramotors-red/60" }`}
             disabled={selectedConstructionId==null}
           >
             <div className="flex gap-x-1 justify-center">
@@ -224,7 +224,7 @@ const AttendanceComponent = () => {
                       onClick={() => openMapModal(checkInLatitude, checkInLongitude)}
                       className="text-blue-500 underline"
                     >
-                      <Badge customColor="bg-blue-800" customText="Ver mapa" />
+                      <Badge customColor="bg-bramotors-red" customText="Ver mapa" />
                     </button>
                   )}
                 </p>
@@ -234,7 +234,7 @@ const AttendanceComponent = () => {
                     onClick={() => openMapModal(checkOutLatitude, checkOutLongitude)}
                     className="text-blue-500 underline"
                   >
-                    <Badge customColor="bg-blue-800" customText="Ver mapa" />
+                    <Badge customColor="bg-bramotors-red" customText="Ver mapa" />
                   </button>
                 )}
                 </p>
@@ -255,7 +255,7 @@ const AttendanceComponent = () => {
             <div className="mt-4 flex justify-center space-x-4">
               <button
                 onClick={confirmAttendance}
-                className="px-4 py-2 text-xs bg-blue-800 font-semibold text-white rounded-md hover:bg-sky-600"
+                className="px-4 py-2 text-xs bg-bramotors-red font-semibold text-white rounded-md hover:bg-bramotors-red/60"
               >
                 CONFIRMAR
               </button>
