@@ -294,7 +294,7 @@ const fetchEntity = async (id: number) => {
                 {mode === "delete" ? (
                   <button onClick={handleDelete} className="px-4 py-2 bg-bramotors-red hover:bg-bramotors-red/70 text-white rounded">Eliminar</button>
                 ) : (
-                  <button type="submit" className="px-4 py-2 hover:bg-bramotors-red/70 text-white rounded">
+                  <button type="submit" className="px-4 py-2 2 bg-bramotors-red hover:bg-bramotors-red/70 text-white rounded">
                     {mode === "edit" ? "Actualizar" : "Guardar"}
                   </button>
                 )}
