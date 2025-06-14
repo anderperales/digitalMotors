@@ -4,7 +4,7 @@ import { v2 as cloudinary } from 'cloudinary';
 // Configura Cloudinary usando variables de entorno sin el prefijo NEXT_PUBLIC_
 cloudinary.config({
   cloud_name: process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME,
-  api_key: process.env.NEXT_PUBLIC_CLOUDINARY_API_KEY,
+  api_key: process.env.NEXT_PUBLIC_CLOUDINARY_API,
   api_secret: process.env.CLOUDINARY_API_SECRET, // Asegúrate de que esté en el entorno
 });
 
