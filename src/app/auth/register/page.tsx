@@ -45,7 +45,7 @@ function RegisterPage() {
         <div
             className="min-h-screen flex items-center justify-center bg-cover bg-center"
             style={{
-                backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 128, 0.5)), url('/bg.png')`,
+                    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(255, 0, 0, 0.3)), url('/bg.png')`,
             }}
         >
             <section >
@@ -55,7 +55,7 @@ function RegisterPage() {
                     <div className="flex flex-col items-center justify-center px-6 mx-auto md:h-screen lg:py-0">
                         <Link href={"/"}>
                         <Image
-                            style={{ objectFit: 'contain', backgroundColor: 'transparent' }} className="mr-2 mb-5" src="/logo.svg" alt="logo" height={169} width={300}></Image>
+                            style={{ objectFit: 'contain', backgroundColor: 'transparent' }} className="mr-2 mb-5" src="/logo.png" alt="logo" height={169} width={300}></Image>
                         </Link>
                         <div className="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
                             <div className="p-6 space-y-4 md:space-y-6 sm:p-8">

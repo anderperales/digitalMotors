@@ -152,7 +152,7 @@ const downloadFiles = async (
                 e.stopPropagation();
                 openGallery();
               }}
-              className="px-2 py-1 bg-blue-800 text-white rounded hover:bg-sky-600 flex items-center gap-1"
+              className="px-2 py-1 bg-bramotors-red text-white rounded hover:bg-bramotors-red/60 flex items-center gap-1"
             >
               <HiDocument />
               {book.files.length} archivo(s)
@@ -169,7 +169,7 @@ const downloadFiles = async (
                     book.createdAt.toString()
                   );
                 }}
-                className="px-2 py-1 bg-blue-800 text-white rounded hover:bg-sky-600 flex items-center gap-1"
+                className="px-2 py-1 bg-bramotors-red text-white rounded hover:bg-bramotors-red/60 flex items-center gap-1"
               >
                 <HiDownload />
               </button>

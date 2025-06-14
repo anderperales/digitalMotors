@@ -19,7 +19,7 @@ export async function POST() {
     // 4. Procesar cada producto
     const skippedProducts: string[] = []; // Para almacenar los productos que no se insertan
     for (const product of mockProducts) {
-      const { name, category, unit, brand } = product;
+      const { name, category, unit } = product;
 
       // Buscar ID de categoría
       const categoryRecord = await prisma.category.findFirst({
@@ -31,12 +31,7 @@ export async function POST() {
         where: { name: unit.toUpperCase() },
       });
 
-      // Buscar ID de marca
-      const marcRecord= await prisma.brand.findFirst({
-        where: { name: brand.toUpperCase() },
-      });
-
-      if (!categoryRecord || !unitRecord || !marcRecord) {
+      if (!categoryRecord || !unitRecord) {
         console.warn(`No se encontró categoría o unidad para ${name}`);
         skippedProducts.push(name); // Agregar el nombre del producto a la lista de saltados
         continue; // Saltar este producto
@@ -48,7 +43,6 @@ export async function POST() {
           name,
           category: { connect: { id: categoryRecord.id } },
           unit: { connect: { id: unitRecord.id } },
-          brand: { connect: { id: marcRecord.id } },
         },
       });
     }

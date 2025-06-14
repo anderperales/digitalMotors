@@ -1,85 +1,70 @@
-"use client";
-import React from "react";
-import { FiTool } from "react-icons/fi";
-import { HiBookOpen, HiBriefcase } from "react-icons/hi";
-import { handleButtonClick } from "./whatsappUtils";
+'use client';
 
-const Services: React.FC = () => {
+import {
+  FaTools,
+  FaCarCrash,
+  FaMicrochip,
+} from 'react-icons/fa';
+
+import { FaArrowUpRightFromSquare } from 'react-icons/fa6';
+
+export default function Services() {
+  const services = [
+    {
+      key: 'mantenimiento',
+      icon: <FaTools className="text-4xl mb-4 text-bramotors-red" />,
+      title: 'Mantenimiento General',
+      text: 'Prevención y solución de fallas mecánicas con inspección completa.',
+    },
+    {
+      key: 'frenos',
+      icon: <FaCarCrash className="text-4xl mb-4 text-bramotors-red" />,
+      title: 'Servicio de Frenos',
+      text: 'Revisión, cambio y ajuste de frenos para tu seguridad en carretera.',
+    },
+    {
+      key: 'afinamiento',
+      icon: <FaMicrochip className="text-4xl mb-4 text-bramotors-red" />,
+      title: 'Afinamiento Electrónico',
+      text: 'Diagnóstico computarizado y optimización del rendimiento del motor.',
+    },
+  ];
 
   return (
-    <section className="py-36 px-4 md:mt-0 mt-36 bg-blue-800">
-        <div className="pb-24 w-full flex flex-col items-center  space-y-6">
-            <h2 className="text-4xl md:text-5xl font-bold text-white text-center">
-            Todo en un solo lugar</h2>
-            <p className="text-white font-bold text-xl md:text-2xl text-center ">
-                Encuentra cursos especializados y herramientas digitales para destacar en el mundo laboral
-            </p>
+    <section id="services" className="py-20 px-6 text-center  text-white">
+      <div className="max-w-5xl mx-auto">
+        <div className="mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Nuestros Servicios</h2>
+          <p className="text-white">
+            Nos especializamos en el cuidado integral de tu vehículo.
+          </p>
         </div>
-        <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div
-            key={1}
-            className="cursor-pointer py-8  bg-white rounded-3xl w-full overflow-hidden transform transition-transform duration-300 ease-in-out hover:scale-105"
-          >
-            <div className="justify-center items-center flex flex-col">
-              <HiBookOpen className="text-blue-800 text-9xl"></HiBookOpen>
-            </div>
-            <div className="flex flex-col mt-4">
-              <h1 className="text-black text-lg md:text-xl lg:text-2xl font-bold text-center">
-                Aprende 24/7
-              </h1>
-              <p className="text-black px-8 text-sm md:text-lg lg:text-lg max-w-full text-center mx-auto mt-2">
-                Descripcion
-              </p>
-            </div>
-          </div>
-          <div
-            key={2}
-            className="cursor-pointer  py-8  bg-white rounded-3xl w-full overflow-hidden transform transition-transform duration-300 ease-in-out hover:scale-105"
-          >
-            <div className="justify-center items-center flex flex-col">
-            <FiTool className="text-blue-800 text-9xl"></FiTool>
-            </div>
-            <div className="flex flex-col mt-4">
-                <h1 className="text-black text-lg md:text-xl lg:text-2xl font-bold text-center">
-                Herramientas Digitales
-                </h1>
-                <p className="text-black px-8 text-sm md:text-lg lg:text-lg max-w-full text-center mx-auto mt-2">
-                Descripcion
-                </p>
-            </div>
-          </div>
-          <div
-            key={3}
-            className="cursor-pointer bg-white  py-8 rounded-3xl w-full overflow-hidden transform transition-transform duration-300 ease-in-out hover:scale-105"
-          >
-          <div className="justify-center items-center flex flex-col">
-              <HiBriefcase className="text-blue-800 text-9xl"></HiBriefcase>
-            </div>
-            <div className="flex flex-col mt-4">
-              <h1 className="text-black text-lg md:text-xl lg:text-2xl font-bold text-center">
-                Ofertas Laborales
-              </h1>
-              <p className="text-black px-8 text-sm md:text-lg lg:text-lg max-w-full text-center mx-auto mt-2">
-                Descripcion
-              </p>
-            </div>
-          </div>
-        </div>
-        <div className="pt-24 w-full flex flex-col items-center  space-y-6">
-            <h2 className="text-4xl md:text-5xl font-bold text-white text-center ">
-            ¿Te quedaron dudas?</h2>
-            <p className="text-white font-bold text-xl md:text-2xl text-center ">
-                ¡Conversa con un asesor especializado!
-            </p>
-            <button className="bg-white text-black font-bold py-3 px-6 rounded-full  transition-transform transform hover:scale-105 active:scale-95"
-            onClick={() => handleButtonClick("+51967203938", "Hola, me gustaría saber más sobre otro servicio")}
-            >
-                EMPECEMOS YA!
-            </button>
-        </div>
-    </section>
-    
-  );
-};
 
-export default Services;
+        <div className="grid gap-8 md:grid-cols-3">
+          {services.map(({ key, icon, title, text }) => (
+            <div
+              key={key}
+              className="relative p-6 bg-gradient-to-r from-white/10 to-white/5 border border-white/10 rounded-lg shadow-sm hover:shadow-md transition text-left"
+            >
+              <a
+                href={`#${key}`}
+                className="absolute top-4 right-4 text-xs flex gap-2 items-center font-semibold text-bramotors-red hover:underline"
+              >
+                Leer más
+                <FaArrowUpRightFromSquare className="text-xs" />
+              </a>
+
+              {icon}
+              <h3 className="text-2xl font-semibold mb-2 font-sans">
+                {title}
+              </h3>
+              <p className="text-sm text-white">
+                {text}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}

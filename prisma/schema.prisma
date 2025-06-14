@@ -1,184 +1,195 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
 generator client {
   provider = "prisma-client-js"
 }
-
 datasource db {
   provider = "sqlite"
-  url      = "file:./dev.db"
+  url = "file:./dev.db"// uses connection pooling
+  //provider = "postgresql"
+  //url = env("POSTGRES_PRISMA_URL")
+  //directUrl = env("POSTGRES_URL_NON_POOLING")
 }
-
 model Book {
-  id             Int          @id @default(autoincrement())
-  team           String?
-  description    String
-  comment        String?      @default("")
-  createdAt      DateTime     @default(now())
-  updatedAt      DateTime     @updatedAt
-  userId         Int
-  constructionId Int          @default(0)
-  user           User         @relation(fields: [userId], references: [id])
-  construction   Construction @relation(fields: [constructionId], references: [id])
-  trabajadores   Trabajador[] @relation("BookTrabajador")
-}
-
-model File {
-  id        Int      @id @default(autoincrement())
-  publicId  String
-  url       String
-  type      String
+  id Int @id @default(autoincrement())
+  team String?
+  description String
+  comment String? @default("")
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+
+  user User @relation(fields: [userId], references: [id])
+  userId Int
+  
+  construction Construction @relation(fields: [constructionId], references: [id])
+  constructionId Int @default(0)
+  trabajadores  Trabajador[] @relation("BookTrabajador")
+} 
+
+model File {
+  id Int @id @default(autoincrement())
+  publicId  String // public_id de Cloudinary para eliminar el archivo
+  url String // URL del archivo almacenado en Cloudinary
+  type String // Tipo de archivo: "image", "video", "document", etc.
+  createdAt DateTime @default(now()) // Fecha de creación
+  updatedAt DateTime @updatedAt // Fecha de última actualización
+
+  product Product @relation(fields: [productId], references: [id]) // Relación con Book
   productId Int
-  product   Product  @relation(fields: [productId], references: [id])
 }
 
 model Persona {
-  id         Int         @id @default(autoincrement())
+  id         Int     @id @default(autoincrement())
   nombres    String
   apellidos  String
   celular    String
   direccion  String
-  email      String      @unique
-  userId     Int?        @unique
-  user       User?       @relation(fields: [userId], references: [id])
+  email      String  @unique
+  user       User?   @relation(fields: [userId], references: [id])
+  userId     Int?    @unique // Relación opcional con 
   trabajador Trabajador?
 }
 
+
 model User {
-  id            Int            @id @default(autoincrement())
-  email         String         @unique
-  username      String         @unique
-  password      String
-  createdAt     DateTime       @default(now())
-  updatedAt     DateTime       @updatedAt
-  cvUrl         String?        @default("")
-  cvUpdatedAt   DateTime       @updatedAt
-  state         Boolean        @default(false)
-  type          Int            @default(1)
-  personaId     Int?           @unique
-  attendances   Attendance[]
-  books         Book[]
-  persona       Persona?
-  companies     Company[]      @relation("UserToCompanies")
+  id Int @id @default(autoincrement())
+  email String @unique
+  username String @unique
+  password String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  cvUrl String? @default("")
+  cvUpdatedAt DateTime @updatedAt
+  state Boolean @default(false)
+  books Book[]
+  companies Company[] @relation("UserToCompanies")
   constructions Construction[] @relation("UserToConstructions")
+  type Int @default(1)
+  attendances    Attendance[]
+  persona Persona?
+  personaId Int?   @unique
 }
 
 model Company {
-  id            Int            @id @default(autoincrement())
-  companyName   String
-  RUC           String         @unique
+  id Int @id @default(autoincrement())
+  companyName String
+  RUC String @unique
   constructions Construction[]
-  users         User[]         @relation("UserToCompanies")
+  users User[] @relation("UserToCompanies")
 }
 
+
 model Cargo {
-  id           Int          @id @default(autoincrement())
-  nombre       String       @unique
+  id          Int          @id @default(autoincrement())
+  nombre      String       @unique
   trabajadores Trabajador[]
 }
 
 model Trabajador {
-  id                         Int                 @id @default(autoincrement())
-  personaId                  Int                 @unique
-  cargoId                    Int
-  constructionId             Int
-  movimientosComoSolicitante MovimientoAlmacen[] @relation("SolicitanteRelacion")
-  movimientosComoResponsable MovimientoAlmacen[] @relation("ResponsableRelacion")
-  persona                    Persona             @relation(fields: [personaId], references: [id])
-  cargo                      Cargo               @relation(fields: [cargoId], references: [id])
-  construction               Construction        @relation(fields: [constructionId], references: [id])
-  books                      Book[]              @relation("BookTrabajador")
+  id            Int          @id @default(autoincrement())
+  persona       Persona      @relation(fields: [personaId], references: [id])
+  personaId     Int          @unique
+
+  cargo         Cargo        @relation(fields: [cargoId], references: [id])
+  cargoId       Int
+
+  construction  Construction @relation(fields: [constructionId], references: [id])
+  constructionId Int
+
+  books         Book[]       @relation("BookTrabajador")
+  movimientosComoSolicitante MovimientoAlmacen[] @relation(name: "SolicitanteRelacion")
+  movimientosComoResponsable MovimientoAlmacen[] @relation(name: "ResponsableRelacion")
 }
+
 
 model Construction {
-  id           Int                 @id @default(autoincrement())
-  description  String
-  startDate    DateTime?
-  endDate      DateTime?
-  address      String?
-  latitude     Float?
-  longitude    Float?
-  companyId    Int
-  attendances  Attendance[]
-  book         Book[]
-  company      Company             @relation(fields: [companyId], references: [id])
-  movimientos  MovimientoAlmacen[]
-  trabajadores Trabajador[]
-  users        User[]              @relation("UserToConstructions")
+  id               Int       @id @default(autoincrement())
+  description      String
+  startDate        DateTime? // Fecha de inicio, puede ser nula
+  endDate          DateTime? // Fecha de culminación, puede ser nula
+  address          String?   // Dirección de la obra
+  latitude         Float?    // Latitud
+  longitude        Float?    // Longitud
+  company          Company   @relation(fields: [companyId], references: [id])
+  companyId        Int
+  book             Book[]
+  users            User[]    @relation("UserToConstructions")
+  attendances      Attendance[]
+  trabajadores     Trabajador[]
+  movimientos MovimientoAlmacen[]
 }
 
+
 model Attendance {
-  id             Int          @id @default(autoincrement())
-  status         Int          @default(0)
+  id             Int       @id @default(autoincrement())
+  status         Int       @default(0)
   notes          String?
-  latitude       Float?
-  longitude      Float?
-  createdAt      DateTime     @default(now())
-  updatedAt      DateTime     @updatedAt
+  latitude       Float?    // Latitud del usuario en el momento de la asistencia
+  longitude      Float?    // Longitud del usuario en el momento de la asistencia
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+
+  // Relaciones
+  construction   Construction  @relation(fields: [constructionId], references: [id])
   constructionId Int
+
+  user           User          @relation(fields: [userId], references: [id])
   userId         Int
-  construction   Construction @relation(fields: [constructionId], references: [id])
-  user           User         @relation(fields: [userId], references: [id])
 }
 
 model Product {
-  id            Int                 @id @default(autoincrement())
-  name          String              @unique
-  purchasePrice Float?
-  salePrice     Float?
-  color         String?
-  brandId       Int
-  weight        Float?
-  size          String?
-  condition     String?             @default("new")
-  year          Int?
-  notes         String?
-  categoryId    Int
-  unitId        Int
-  createdAt     DateTime            @default(now())
-  updatedAt     DateTime            @updatedAt
-  files         File[]
-  movimientos   MovimientoAlmacen[]
-  brand         Brand               @relation(fields: [brandId], references: [id])
-  category      Category            @relation(fields: [categoryId], references: [id])
-  unit          Unit                @relation(fields: [unitId], references: [id])
+  id         Int      @id @default(autoincrement())
+  name       String   @unique
+  category   Category @relation(fields: [categoryId], references: [id])
+  categoryId Int
+  unit       Unit     @relation(fields: [unitId], references: [id])
+  unitId     Int
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+  movimientos MovimientoAlmacen[]
+  files File[]
 }
 
-model Brand {
-  id       Int       @id @default(autoincrement())
-  name     String    @unique
-  products Product[]
-}
+
 
 model Almacen {
-  id        Int    @id @default(autoincrement())
-  nombre    String @unique
-  direccion String
+  id         Int       @id @default(autoincrement())
+  nombre       String    @unique
+  direccion       String
 }
 
+
 model Category {
-  id       Int       @id @default(autoincrement())
-  name     String    @unique
-  products Product[]
+  id         Int       @id @default(autoincrement())
+  name       String    @unique // Nombre de la categoría
+  products   Product[] // Relación con productos
 }
 
 model Unit {
-  id       Int       @id @default(autoincrement())
-  name     String    @unique
-  products Product[]
+  id         Int       @id @default(autoincrement())
+  name       String    @unique // Nombre de la unidad (ej. UND, M, KG, etc.)
+  products   Product[] // Relación con productos
 }
 
 model MovimientoAlmacen {
-  id             Int          @id @default(autoincrement())
-  createdAt      DateTime     @default(now())
-  updatedAt      DateTime     @updatedAt
-  productoId     Int
-  solicitanteId  Int
-  responsableId  Int
-  cantidad       Float
+  id            Int         @id @default(autoincrement())
+  createdAt     DateTime    @default(now())
+  updatedAt     DateTime    @updatedAt
+
+  producto      Product     @relation(fields: [productoId], references: [id])
+  productoId    Int
+
+  solicitante   Trabajador  @relation(name: "SolicitanteRelacion", fields: [solicitanteId], references: [id])
+  solicitanteId Int
+
+  responsable   Trabajador  @relation(name: "ResponsableRelacion", fields: [responsableId], references: [id])
+  responsableId Int
+
+  cantidad      Float
+
+  construction   Construction  @relation(fields: [constructionId], references: [id])
   constructionId Int
-  producto       Product      @relation(fields: [productoId], references: [id])
-  solicitante    Trabajador   @relation("SolicitanteRelacion", fields: [solicitanteId], references: [id])
-  responsable    Trabajador   @relation("ResponsableRelacion", fields: [responsableId], references: [id])
-  construction   Construction @relation(fields: [constructionId], references: [id])
+
+  
 }

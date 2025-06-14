@@ -6,13 +6,13 @@ import Image from 'next/image';
 import Link from "next/link";
 import { handleButtonClick } from "./whatsappUtils";
 import { HiOutlineClipboardCheck, HiOutlineUsers, HiOutlineViewGrid} from "react-icons/hi";
+import { FaTools } from "react-icons/fa";
 
 export const RevealBento = () => {
   return (
     <div className="w-full px-4 lg:px-24 text-white">
       <div className="mb-20 mx-auto grid grid-flow-dense grid-cols-12 gap-4 text-center">
-        <HeaderBlock />
-        <SocialsBlock />
+        
         <div className="col-span-12 flex justify-center">
         <Image 
           src="/logo.svg" 
@@ -22,13 +22,21 @@ export const RevealBento = () => {
           className="mt-2 rounded-lg"
         />
       </div>
+        <HeaderBlock />
+        <SocialsBlock />
       </div>
       <div className="flex justify-end">
-      <button className="relative  bg-blue-800 border-2 p-4 rounded-full text-white items-center md:flex transition-transform transform hover:scale-105 active:scale-95"
-        onClick={() => handleButtonClick("+51967203938", "Hola, me gustaría saber más sobre otro servicio")}>
-          <span className='font-bold'> ¿Tienes dudas?</span>
-          <Image className='absolute -mt-12 -ml-20 transition-transform transform hover:scale-105 active:scale-95 animate-bounce' src="/bot.png" width={100} height={100} alt="contacto" />
-        </button>
+<button
+        className="animate-bounce md:bottom-6 md:right-6 z-50 flex items-center gap-2 lg bg-gradient-to-r from-white/10 to-white/5 text-white px-6 py-3 pr-8 rounded-full shadow-lg border-2 border-white/50 hover:bg-bramotors-red transition-all duration-300 hover:scale-105 active:scale-95"
+        aria-label="Habla con un experto de Bramotors"
+      >
+        <div className="relative">
+          <FaTools className="w-6 h-6" />
+        </div>
+        <span className="font-semibold text-sm md:text-base tracking-wide">
+          Habla con un experto
+        </span>
+      </button>
       </div>
       
     </div>
@@ -42,14 +50,14 @@ type BlockProps = {
 
 const Block = ({ className, children }: BlockProps) => {
   return (
-    <div className={twMerge("col-span-4 rounded-lg", className)}>
+    <div className={twMerge("col-span-4 rounded-lg bg-gradient-to-r from-white/10 to-white/5 border border-white/10 shadow-md hover:shadow-lg transition -blur-lg", className)}>
       {children}
     </div>
   );
 };
 
 const HeaderBlock = () => (
-  <Block className="col-span-12 bg-blue-800  border-white border-2 backdrop-blur-lg row-span-2 md:col-span-6 p-6 flex items-center justify-center">
+  <Block className="col-span-12  row-span-2 md:col-span-6 p-6 flex items-center justify-center">
     <h1 className="hidden md:block gradient-text text-2xl font-bold leading-tight text-center">
     LA CALIDAD NO ES UN ACTO, <br />ES UN HÁBITO. CONSTRUYAMOS CON EXCELENCIA.
     </h1>
@@ -63,25 +71,25 @@ const HeaderBlock = () => (
 
 const SocialsBlock = () => (
   <>
-    <Block className="min-h-[100px] flex items-center justify-center col-span-6 md:col-span-3 border-white border-2 bg-blue-800 backdrop-blur-lg">
+    <Block className="min-h-[100px] flex items-center justify-center col-span-6 md:col-span-3">
         <Link href="/cuaderno-de-obra" className="place-items-center force-center">
             <FiBookOpen className="text-5xl" />
             <h1 className="text-xl text-white">Cuaderno</h1>
         </Link>
     </Block>
-    <Block className="min-h-[100px] flex items-center justify-center col-span-6 md:col-span-3 border-white border-2 bg-blue-800 backdrop-blur-lg">
+    <Block className="min-h-[100px] flex items-center justify-center col-span-6 md:col-span-3 ">
         <Link href="/asistencia" className="place-items-center force-center">
         <HiOutlineUsers className="text-5xl" />
         <h1 className="text-xl text-white">Asistencia</h1>
         </Link>
     </Block>
-    <Block className="min-h-[100px] cursor-not-allowed flex items-center justify-center col-span-6 md:col-span-3 border-white border-2 bg-blue-800 backdrop-blur-lg">
+    <Block className="min-h-[100px] cursor-not-allowed flex items-center justify-center col-span-6 md:col-span-3">
     <Link href="#" className="cursor-not-allowed  place-items-center force-center">
         <HiOutlineViewGrid className="text-5xl" />
         <h1 className="text-xl text-white">Almacén</h1>
     </Link>
     </Block>
-    <Block className="min-h-[100px] cursor-not-allowed flex items-center justify-center col-span-6 md:col-span-3 border-white border-2 bg-blue-800 backdrop-blur-lg">
+    <Block className="min-h-[100px] cursor-not-allowed flex items-center justify-center col-span-6 md:col-span-3">
         <Link href="#" className="cursor-not-allowed  place-items-center force-center">
             <HiOutlineClipboardCheck className="text-5xl" />
             <div className="text-xl">Requerimientos</div>

@@ -28,6 +28,5 @@ export const config = {
     "/almacen/:path*",
     "/categorias/:path*",
     "/unidades/:path*",
-    "/marcas/:path*",
   ],
 };

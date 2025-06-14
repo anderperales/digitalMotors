@@ -25,7 +25,7 @@ function NavBar({ updateIsAuthenticated }: { updateIsAuthenticated: (isAuthentic
     <>
       {
         isAuthenticated && !isLoginOrRegisterPage ? (
-          <div className="flex w-full justify-end max-h-3 h-3 items-center p-5 bg-blue-800">
+          <div className="flex w-full justify-end max-h-3 h-3 items-center p-5 bg-bramotors-black">
             <Dropdown
               arrowIcon={false}
               inline

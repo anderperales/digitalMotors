@@ -140,7 +140,7 @@ const BookModal: React.FC<BookModalProps> = ({
 
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
-      <div className="bg-white mx-auto   md:max-w-3xl p-6 rounded-lg shadow-lg">
+      <div className="bg-white w-full md:max-w-3xl p-6 rounded-lg shadow-lg">
         <div className="flex justify-between items-center border-b pb-4">
           <h2 className="text-xl font-semibold">
             {mode === "create" ? "Nuevo Registro"
