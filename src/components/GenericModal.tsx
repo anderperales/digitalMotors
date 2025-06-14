@@ -200,8 +200,8 @@ const fetchEntity = async (id: number) => {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
-      <div className="bg-white w-full md:max-w-3xl p-6 rounded-lg shadow-lg">
+    <div className="fixed inset-0 flex overflow-y-auto items-center justify-center bg-black bg-opacity-50 z-50">
+      <div className="bg-white w-full overflow-y-auto mx-auto max-h-[90vh] md:max-w-3xl p-6 rounded-lg shadow-x1">
         <div className="flex justify-between items-center border-b pb-4">
           <h2 className="text-xl font-semibold">
             {mode === "create"
@@ -290,11 +290,11 @@ const fetchEntity = async (id: number) => {
               </>
               }
               <div className="flex justify-end gap-2 mt-4">
-                <button onClick={onClose} className="px-4 py-2 bg-gray-400 hover:bg-gray-400/70 text-white rounded">Cancelar</button>
+                <button onClick={onClose} className="px-4 py-2 bg-gray-400 text-white rounded">Cancelar</button>
                 {mode === "delete" ? (
-                  <button onClick={handleDelete} className="px-4 py-2 bg-red-600 hover:bg-bramotors-red/70 text-white rounded">Eliminar</button>
+                  <button onClick={handleDelete} className="px-4 py-2 bg-bramotors-red hover:bg-bramotors-red/70 text-white rounded">Eliminar</button>
                 ) : (
-                  <button type="submit" className="px-4 py-2 bg-bramotors-red hover:bg-bramotors-red/70 text-white rounded">
+                  <button type="submit" className="px-4 py-2 hover:bg-bramotors-red/70 text-white rounded">
                     {mode === "edit" ? "Actualizar" : "Guardar"}
                   </button>
                 )}

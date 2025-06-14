@@ -66,8 +66,8 @@ function Menu() {
               </Link>
               
               {userType !== 2 && (
-              <Link href="/categorias-y-unidades" onClick={closeDrawer} className="flex items-center py-2 text-gray-800 hover:bg-gray-200">
-                <HiColorSwatch className="mr-2" /> Categorías y Unidades
+              <Link href="/configuracion-producto" onClick={closeDrawer} className="flex items-center py-2 text-gray-800 hover:bg-gray-200">
+                <HiColorSwatch className="mr-2" /> Configuración de Producto
               </Link>
               )}
               

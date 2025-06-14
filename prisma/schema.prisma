@@ -137,22 +137,34 @@ model Attendance {
   user           User          @relation(fields: [userId], references: [id])
   userId         Int
 }
-
 model Product {
-  id         Int      @id @default(autoincrement())
-  name       String   @unique
-  category   Category @relation(fields: [categoryId], references: [id])
-  categoryId Int
-  unit       Unit     @relation(fields: [unitId], references: [id])
-  unitId     Int
-  createdAt  DateTime @default(now())
-  updatedAt  DateTime @updatedAt
-  movimientos MovimientoAlmacen[]
-  files File[]
+  id            Int                 @id @default(autoincrement())
+  name          String              @unique
+  purchasePrice Float?
+  salePrice     Float?
+  color         String?
+  brandId       Int
+  weight        Float?
+  size          String?
+  condition     String?             @default("new")
+  year          Int?
+  notes         String?
+  categoryId    Int
+  unitId        Int
+  createdAt     DateTime            @default(now())
+  updatedAt     DateTime            @updatedAt
+  files         File[]
+  movimientos   MovimientoAlmacen[]
+  brand         Brand               @relation(fields: [brandId], references: [id])
+  category      Category            @relation(fields: [categoryId], references: [id])
+  unit          Unit                @relation(fields: [unitId], references: [id])
 }
 
-
-
+model Brand {
+  id       Int       @id @default(autoincrement())
+  name     String    @unique
+  products Product[]
+}
 model Almacen {
   id         Int       @id @default(autoincrement())
   nombre       String    @unique

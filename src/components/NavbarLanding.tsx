@@ -42,6 +42,9 @@ export default function Navbar() {
           <Link href="#locations" className="hover:underline text-sm font-medium">
             ¿Dónde nos ubicamos?
           </Link>
+          <Link href="/catalogo" className="hover:underline text-sm font-medium">
+            Catálogo
+          </Link>
           <Link href="#promotions" className="hover:underline text-sm font-medium">
             Nuestras promociones
           </Link>

@@ -6,6 +6,7 @@ interface Producto {
   name: string;
   files: { url: string }[];
   category: { name: string };
+  brand: { name: string };
   unit: { name: string };
 }
 

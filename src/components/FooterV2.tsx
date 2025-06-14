@@ -1,7 +1,7 @@
 'use client';
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
-import { FaTools } from 'react-icons/fa';
+import { FaTools, FaWhatsapp } from 'react-icons/fa';
 
 export default function Footer() {
   const [year, setYear] = useState<number | null>(null);
@@ -49,13 +49,13 @@ export default function Footer() {
 
       </div>
       <button
-        className="animate-bounce fixed bottom-20 right-4 md:bottom-6 md:right-6 z-50 flex items-center gap-2 lg bg-gradient-to-r from-white/10 to-white/5 text-white px-6 py-3 pr-8 rounded-full shadow-lg border-2 border-white/50 hover:bg-bramotors-red transition-all duration-300 hover:scale-105 active:scale-95"
+        className="animate-bounce fixed bottom-20 right-4 md:bottom-6 md:right-6 z-50 flex items-center gap-2 lg bg-gradient-to-r from-white/10 to-white/5 text-white px-6 py-3 pr-8 rounded-full shadow-lg border-2 border-white/50 hover:bg-green-500 transition-all duration-300 hover:scale-105 active:scale-95"
         aria-label="Habla con un experto de Bramotors"
       >
         <div className="relative">
-          <FaTools className="w-6 h-6" />
+          <FaWhatsapp className="w-8 h-8" />
         </div>
-        <span className="font-semibold text-sm md:text-base tracking-wide">
+        <span className="font-semibold text-sm md:text-lg tracking-wide">
           Habla con un experto
         </span>
       </button>

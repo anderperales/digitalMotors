@@ -8,7 +8,7 @@ import FooterV2 from "@/components/FooterV2";
 
 export default function Home() {
   return (
-    <div className="bg-gradient-to-br from-black via-bramotors-black to-bramotors-red">
+    <div className="bg-gradient-to-br from-black/90 via-bramotors-black to-bramotors-red">
       <NavbarLanding />
       <Hero />
       <Services />

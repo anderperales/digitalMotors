@@ -1,11 +1,9 @@
 "use client"
 import React from "react";
 import { twMerge } from "tailwind-merge";
-import { FiBookOpen } from "react-icons/fi";
 import Image from 'next/image';
 import Link from "next/link";
-import { handleButtonClick } from "./whatsappUtils";
-import { HiOutlineClipboardCheck, HiOutlineUsers, HiOutlineViewGrid} from "react-icons/hi";
+import { HiOutlineColorSwatch, HiOutlineOfficeBuilding, HiOutlineUsers, HiOutlineViewGrid} from "react-icons/hi";
 import { FaTools } from "react-icons/fa";
 
 export const RevealBento = () => {
@@ -14,6 +12,7 @@ export const RevealBento = () => {
       <div className="mb-20 mx-auto grid grid-flow-dense grid-cols-12 gap-4 text-center">
         
         <div className="col-span-12 flex justify-center">
+          <Link href="/">
         <Image 
           src="/logo.svg" 
           width={200} 
@@ -21,6 +20,7 @@ export const RevealBento = () => {
           alt="Logo Digital Motors" 
           className="mt-2 rounded-lg"
         />
+        </Link>
       </div>
         <HeaderBlock />
         <SocialsBlock />
@@ -72,27 +72,27 @@ const HeaderBlock = () => (
 const SocialsBlock = () => (
   <>
     <Block className="min-h-[100px] flex items-center justify-center col-span-6 md:col-span-3">
-        <Link href="/cuaderno-de-obra" className="place-items-center force-center">
-            <FiBookOpen className="text-5xl" />
-            <h1 className="text-xl text-white">Cuaderno</h1>
+        <Link href="/sedes" className="place-items-center force-center">
+            <HiOutlineOfficeBuilding className="text-5xl" />
+            <h1 className="text-xl text-white">Sedes</h1>
         </Link>
     </Block>
     <Block className="min-h-[100px] flex items-center justify-center col-span-6 md:col-span-3 ">
-        <Link href="/asistencia" className="place-items-center force-center">
+        <Link href="/trabajadores" className="place-items-center force-center">
         <HiOutlineUsers className="text-5xl" />
-        <h1 className="text-xl text-white">Asistencia</h1>
+        <h1 className="text-xl text-white">Trabajadores</h1>
         </Link>
     </Block>
-    <Block className="min-h-[100px] cursor-not-allowed flex items-center justify-center col-span-6 md:col-span-3">
-    <Link href="#" className="cursor-not-allowed  place-items-center force-center">
-        <HiOutlineViewGrid className="text-5xl" />
-        <h1 className="text-xl text-white">Almacén</h1>
+    <Block className="min-h-[100px] flex items-center justify-center col-span-6 md:col-span-3">
+    <Link href="/configuracion-producto" className=" place-items-center force-center">
+            <HiOutlineColorSwatch className="text-5xl" />
+        <h1 className="text-xl text-white">Categorías</h1>
     </Link>
     </Block>
-    <Block className="min-h-[100px] cursor-not-allowed flex items-center justify-center col-span-6 md:col-span-3">
-        <Link href="#" className="cursor-not-allowed  place-items-center force-center">
-            <HiOutlineClipboardCheck className="text-5xl" />
-            <div className="text-xl">Requerimientos</div>
+    <Block className="min-h-[100px] flex items-center justify-center col-span-6 md:col-span-3">
+        <Link href="/productos" className="place-items-center force-center">
+            <HiOutlineViewGrid className="text-5xl" />
+            <div className="text-xl">Productos</div>
         </Link>
     </Block>
   </>

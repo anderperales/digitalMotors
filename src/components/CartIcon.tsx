@@ -13,7 +13,7 @@ export default function CartIcon() {
   return (
     <Link
       href="/cart"
-      className="fixed bottom-6 right-6 bg-bramotors-red text-white p-3 rounded-full shadow-lg hover:bg-blue-900 transition z-50 flex items-center justify-center"
+      className="fixed bottom-6 right-6 bg-bramotors-red text-white p-3 rounded-full shadow-lg hover:bg-bramotors-red/70 transition z-50 flex items-center justify-center"
       title="Ver carrito"
     >
       <FaShoppingCart className="text-xl" />
