@@ -60,7 +60,7 @@ export default function CatalogPage() {
     <div className="min-h-screen bg-gradient-to-b from-black/80 via-black to-red-950 py-12 px-6 text-white">
       <Link
           href="/"
-          className="fixed top-6 left-6 inline-flex items-center gap-2 h-6 px-4 py-2 bg-white/10 border border-white/20 rounded-full text-sm font-semibold text-white hover:bg-white/20 transition"
+          className="fixed top-12 left-6 inline-flex items-center gap-2 h-6 px-4 py-2 bg-white/10 border border-white/20 rounded-full text-sm font-semibold text-white hover:bg-white/20 transition"
         >
           ← Volver
         </Link>

@@ -18,15 +18,16 @@ export default withAuth(
 export const config = {
   matcher: [
     "/dashboard/:path*",
-    "/cv/:path*",
-    "/bolsa-de-trabajo/:path*",
-    "/checkout/:path*",
-    "/process_payment/:path*",
+    "/productos",
+    "/productos/:path*",
+    "/sedes",
     "/sedes/:path*",
     "/cuaderno-de-obra/:path*",
     "/asistencia/:path*",
     "/almacen/:path*",
-    "/categorias/:path*",
-    "/unidades/:path*",
+    "/configuracion-producto",
+    "/configuracion-producto/:path*",
+    "/trabajadores",
+    "/trabajadores/:path*",
   ],
 };
